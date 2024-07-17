@@ -31,6 +31,7 @@ return {
                 "omnisharp",
                 "rust_analyzer",
                 "clangd",
+                "powershell_es",
 
             },
             handlers = {
@@ -70,15 +71,14 @@ return {
                         capabilities = capabilities,
                     })
                 end,
+                powershell_es = function()
+                    lspconfig.powershell_es.setup({
+                        capabilities = capabilities,
+                })
+                end,
+
             }
         })
-        lspconfig.powershell_es.setup({
-                capabilities = capabilities,
-				bundle_path = vim.fn.stdpath("data") .. "/mason/packages/powershell-editor-services",
-				init_options = {
-					enableProfileLoading = false,
-				}
-		})
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
