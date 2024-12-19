@@ -6,7 +6,7 @@ return {
 			-- A list of parser names, or "all"
 			ensure_installed = {
 				 "arduino", "c", "cmake", "cpp", "c_sharp", "gdscript", "json", 
-				 "json5", "lua", "regex", "vim", "vimdoc", "xml", "zig"
+				 "json5", "lua", "regex", "vim", "vimdoc", "xml", "zig", "java"
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)

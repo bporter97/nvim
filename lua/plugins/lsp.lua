@@ -32,7 +32,7 @@ return {
                 "rust_analyzer",
                 "clangd",
                 "powershell_es",
-
+                "jdtls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
